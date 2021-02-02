@@ -25,10 +25,13 @@ jobs:
         with:
           dependency-versions: 'locked'
 
-      - name: Static Code Analysis
+      - name: Code Style
         run: composer lint
 
-      - uses: docker://oskarstark/phpstan-ga
+      - name: Static Code Analysis
+        uses: docker://oskarstark/phpstan-ga
+        env:
+          REQUIRE_DEV: true
         with:
           args: analyse src/
 

@@ -86,16 +86,4 @@ interface MockServerConfigInterface
      * @return int
      */
     public function getHealthCheckTimeout(): int;
-
-    /**
-     * @param int $seconds
-     *
-     * @return MockServerConfigInterface
-     */
-    public function setHealthCheckRetrySec($seconds): self;
-
-    /**
-     * @return int
-     */
-    public function getHealthCheckRetrySec(): int;
 }
